@@ -1,6 +1,18 @@
 # API REST CALCULADORA
 Aplicación API Restful desarrollada con SpringBoot y java. Expone dos endpoint para realizar varias operaciones(sumar y restar).
 
+Los endpoints desarrollados son los siguientes:
+
+Suma
+```
+localhost:8080/calculator/operation/sum?num1=4&num2=2
+```
+
+Resta
+```
+localhost:8080/calculator/operation/subtract?num1=4&num2=2
+```
+
 ### Pre-Requisitos 📋
 ```
 - Java mínimo 1.8

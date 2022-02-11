@@ -8,6 +8,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import io.corp.calculator.TracerImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class CalculatorControllerTest {
 
 	@MockBean
 	private IOperationService iOperationService;
+
+	@MockBean
+	private TracerImpl tracer;
 
 	@Test
 	public void TestExceptionMethodArgumentTypeMismatchException() throws Exception {

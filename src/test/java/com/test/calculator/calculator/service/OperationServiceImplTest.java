@@ -3,6 +3,7 @@ package com.test.calculator.calculator.service;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import io.corp.calculator.TracerImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
@@ -19,7 +20,7 @@ public class OperationServiceImplTest {
 
 	@BeforeEach
 	public void init() {
-		operationServiceImpl = new OperationServiceImpl();
+		operationServiceImpl = new OperationServiceImpl(new TracerImpl());
 	}
 
 	@Test
